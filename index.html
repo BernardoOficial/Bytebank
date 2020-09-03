@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Bytebank</title>
+</head>
+
+<body>
+
+    <h1>Bytebank</h1>
+    <br>
+    <form action="" method="GET" data-form-cadastrar>
+        <input type="text" name="nome">
+        <input type="number" name="cpf">
+        <input type="number" name="senha">
+
+        <button>Cadastrar novo cliente</button>
+    </form>
+    <br>
+    <br>
+    <form action="" method="GET" data-form-acessar>
+        <input type="number" name="cpf">
+        <input type="number" name="senha">
+
+        <button>Acessar conta cliente</button>
+    </form>
+    <br>
+    <br>
+    <span>Número de clientes: </span>
+
+    <ul data-lista-clientes>
+
+    </ul>
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
