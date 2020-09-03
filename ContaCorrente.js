@@ -7,22 +7,22 @@ class ContaCorrente {
     agencia;
 
     // Privados
-    #cliente;
-    #saldo = 0;
+    _cliente;
+    _saldo = 0;
 
     set cliente(novoCliente) {
         if (novoCliente instanceof Cliente) {
 
-            this.#cliente = novoCliente
+            this._cliente = novoCliente
         }
     }
 
     get cliente() {
-        return this.#cliente;
+        return this._cliente;
     }
 
     get saldo() {
-        return this.#saldo;
+        return this._saldo;
     }
 
 
@@ -34,15 +34,15 @@ class ContaCorrente {
 
 
     sacar(valor) {
-        if (this.#saldo > valor) {
-            this.#saldo -= valor;
+        if (this._saldo > valor) {
+            this._saldo -= valor;
             return valor;
         }
     }
 
     depositar(valor) {
         if (valor < 0) return;
-        this.#saldo += valor;
+        this._saldo += valor;
     }
 
     transferir(valor, conta) {

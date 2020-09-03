@@ -1,20 +1,20 @@
 class Cliente {
     nome;
-    #cpf;
-    #senha;
+    _cpf;
+    _senha;
 
     get cpf() {
-        return this.#cpf;
+        return this._cpf;
     }
 
     get senha() {
-        return this.#senha;
+        return this._senha;
     }
 
     constructor(nome, cpf, senha) {
         this.nome = nome;
-        this.#cpf = cpf;
-        this.#senha = senha;
+        this._cpf = cpf;
+        this._senha = senha;
     }
 
 }

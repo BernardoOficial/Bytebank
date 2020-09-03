@@ -20,7 +20,14 @@ const formCadastro = document.querySelector('[data-form-cadastrar]');
 const formAcessar = document.querySelector('[data-form-acessar]');
 
 // localStorage
-let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+let clientes = JSON.parse(localStorage.getItem('clientes')) || [];;
+
+function atualizarClientes() {
+
+    clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+}
+
+verificarConta();
 
 // Eventos
 formCadastro.addEventListener('submit', cadastrarCliente);
@@ -41,25 +48,34 @@ function cadastrarCliente(evento) {
 
     clientes.push(contaBancaria);
 
+
     localStorage.setItem('clientes', JSON.stringify(clientes));
+    // console.log(clientes);
+    // console.log(clientes.cpf);
+    // console.log(clientes.senha);
 
     verificarConta();
 }
 
 function verificarConta() {
 
+    atualizarClientes();
+
     // Verificar se foi cadastrado o cliente e a conta corrente.
 
     const listaDeClientes = document.querySelector('[data-lista-clientes]');
     let novoCliente;
 
+    listaDeClientes.innerHTML = '';
+
     for (let i = 0; i < clientes.length; i++) {
 
         novoCliente = document.createElement('li');
-        novoCliente.innerHTML = `<p></p>`
+        novoCliente.innerHTML = `
+            <p>${clientes[i]._cliente.nome} | ${clientes[i].agencia} | ${clientes[i]._saldo} </p>
+        `
+        listaDeClientes.appendChild(novoCliente);
     }
-
-
 
 }
 
@@ -73,9 +89,9 @@ function verificarConta() {
 
 // Procurar por determinado cliente através da conta corrente criada;
 
-let teste = [contaCorrenteCliente1, contaCorrenteCliente2];
-let result = teste.filter(conta => {
-    return conta.cliente.nome == 'Bernardo';
-})
+// let teste = [contaCorrenteCliente1, contaCorrenteCliente2];
+// let result = teste.filter(conta => {
+//     return conta.cliente.nome == 'Bernardo';
+// })
 
-console.log(result);
+// console.log(result);
