@@ -1,19 +1,23 @@
 import Cliente from './Cliente.js';
-import ContaCorrente from './ContaCorrente.js';
+import ContaCorrente from './Conta/ContaCorrente.js';
+import ContaPoupanca from './Conta/ContaPoupanca.js';
+import ContaSalario from './Conta/ContaSalario.js';
 
-// A classe funcionar como se fosse um molde, que ao instanciar 
-// ele com o 'new' criamos um objeto baseado nesta classe
+import Gerente from './Funcionarios/Gerente.js';
+import Diretor from './Funcionarios/Diretor.js';
+import SistemaAutentificacao from './SistemaAutentificacao.js';
 
-const cliente1 = new Cliente('Bernardo', 11122233348);
-const cliente2 = new Cliente('Breno', 44455566689);
 
-const contaCorrenteCliente1 = new ContaCorrente(cliente1, 1000);
-const contaCorrenteCliente2 = new ContaCorrente(cliente2, 101);
+const gerente = new Gerente('Bernardo', 488484484, 10000);
+gerente.CadastrarSenha('123456');
+const diretor = new Diretor('Breno', 4992993, 12000);
+diretor.CadastrarSenha('123');
 
-contaCorrenteCliente1.depositar(500);
+const cliente = new Cliente('Bruno', 443434344, '456');
 
-let valorTransferir = 200;
-contaCorrenteCliente1.transferir(valorTransferir, contaCorrenteCliente2)
+const gerenteLogou = SistemaAutentificacao.login(gerente, '123456');
+const diretorLogou = SistemaAutentificacao.login(diretor, '123');
+const clienteLogou = SistemaAutentificacao.login(cliente, '456');
 
 // variáveis
 const formCadastro = document.querySelector('[data-form-cadastrar]');
@@ -27,7 +31,7 @@ function atualizarClientes() {
     clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 }
 
-verificarConta();
+listarClientes();
 
 // Eventos
 formCadastro.addEventListener('submit', cadastrarCliente);
@@ -54,10 +58,10 @@ function cadastrarCliente(evento) {
     // console.log(clientes.cpf);
     // console.log(clientes.senha);
 
-    verificarConta();
+    listarClientes();
 }
 
-function verificarConta() {
+function listarClientes() {
 
     atualizarClientes();
 
@@ -69,23 +73,16 @@ function verificarConta() {
     listaDeClientes.innerHTML = '';
 
     for (let i = 0; i < clientes.length; i++) {
+        console.log(clientes[i].cliente);
 
         novoCliente = document.createElement('li');
         novoCliente.innerHTML = `
-            <p>${clientes[i]._cliente.nome} | ${clientes[i].agencia} | ${clientes[i]._saldo} </p>
+            <p>${clientes[i].cliente.nome} | ${clientes[i].agencia} | ${clientes[i].saldo} </p>
         `
         listaDeClientes.appendChild(novoCliente);
     }
 
 }
-
-
-
-
-
-
-
-
 
 // Procurar por determinado cliente através da conta corrente criada;
 
