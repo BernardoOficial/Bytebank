@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('../fonte/coolvetica/coolvetica rg.ttf') /*Para os demais navegadores*/;
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 80% 20%;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    justify-items: center;
+    background-color: rgb(109,33,119);
+    color: #fff;
+}
+
+header {
+    grid-area: header;
+
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__titulo {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 5.5rem;
+}
+
+.header__quantDeClientes {
+    font-size: 1.2rem;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+        "menu"
+        "formulario";
+    width: 80%;
+}
+
+.main__nav {
+    grid-area: menu;
+    justify-self: center;
+    
+    width: 50%;
+    height: 50px;
+    background-color: rgba(253,184,52, .9);
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__nav__lista {
+    width: 50%;
+    height: 100%;
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .3s;
+}
+
+.main__nav__lista.ativo {
+    background-color: rgba(253,184,52, .9);
+    color: #fff;
+}
+
+.main__nav__lista__link.ativo {
+    color: #fff;
+}
+
+.main__nav__lista__link {
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form input, form button{
+    width: 350px;
+    height: 45px;
+    padding: 0 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: 333;
+
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+form button {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.main__cadastro {
+    grid-area: formulario;
+    justify-self: center;
+}
+
+.main__cadastro form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main__acesso {
+    display: none;
+}
+
+footer {
+    grid-area: footer;
+}

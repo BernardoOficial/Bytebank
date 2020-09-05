@@ -7,35 +7,45 @@ import Gerente from './Funcionarios/Gerente.js';
 import Diretor from './Funcionarios/Diretor.js';
 import SistemaAutentificacao from './SistemaAutentificacao.js';
 
-
-const gerente = new Gerente('Bernardo', 488484484, 10000);
-gerente.CadastrarSenha('123456');
-const diretor = new Diretor('Breno', 4992993, 12000);
-diretor.CadastrarSenha('123');
-
-const cliente = new Cliente('Bruno', 443434344, '456');
-
-const gerenteLogou = SistemaAutentificacao.login(gerente, '123456');
-const diretorLogou = SistemaAutentificacao.login(diretor, '123');
-const clienteLogou = SistemaAutentificacao.login(cliente, '456');
-
 // variáveis
 const formCadastro = document.querySelector('[data-form-cadastrar]');
 const formAcessar = document.querySelector('[data-form-acessar]');
 
 // localStorage
-let clientes = JSON.parse(localStorage.getItem('clientes')) || [];;
+let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+
+// Eventos
+formCadastro.addEventListener('submit', cadastrarCliente);
+// formAcessar.addEventListener('submit', validarAcesso);
 
 function atualizarClientes() {
 
     clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 }
 
-listarClientes();
+function listarClientes() {
 
-// Eventos
-formCadastro.addEventListener('submit', cadastrarCliente);
-// formAcessar.addEventListener('submit', validarAcesso);
+    atualizarClientes();
+
+    // Verificar se foi cadastrado o cliente e a conta corrente.
+
+    const listaDeClientes = document.querySelector('[data-lista-clientes]');
+    let novoCliente;
+
+    listaDeClientes.innerHTML = '';
+
+    for (let i = 0; i < clientes.length; i++) {
+
+        novoCliente = document.createElement('li');
+        novoCliente.innerHTML = `
+            <p>${clientes[i]._cliente.nome} | ${clientes[i]._agencia} | ${clientes[i]._saldo} </p>
+        `
+        listaDeClientes.appendChild(novoCliente);
+    }
+
+}
+
+listarClientes();
 
 function cadastrarCliente(evento) {
 
@@ -52,37 +62,15 @@ function cadastrarCliente(evento) {
 
     clientes.push(contaBancaria);
 
-
     localStorage.setItem('clientes', JSON.stringify(clientes));
-    // console.log(clientes);
-    // console.log(clientes.cpf);
-    // console.log(clientes.senha);
 
     listarClientes();
 }
 
-function listarClientes() {
 
-    atualizarClientes();
 
-    // Verificar se foi cadastrado o cliente e a conta corrente.
 
-    const listaDeClientes = document.querySelector('[data-lista-clientes]');
-    let novoCliente;
 
-    listaDeClientes.innerHTML = '';
-
-    for (let i = 0; i < clientes.length; i++) {
-        console.log(clientes[i].cliente);
-
-        novoCliente = document.createElement('li');
-        novoCliente.innerHTML = `
-            <p>${clientes[i].cliente.nome} | ${clientes[i].agencia} | ${clientes[i].saldo} </p>
-        `
-        listaDeClientes.appendChild(novoCliente);
-    }
-
-}
 
 // Procurar por determinado cliente através da conta corrente criada;
 

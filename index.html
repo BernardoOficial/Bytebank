@@ -12,30 +12,54 @@
 
 <body>
 
-    <h1>Bytebank</h1>
-    <br>
-    <form action="" method="GET" data-form-cadastrar>
-        <input type="text" name="nome" placeholder="digite seu nome">
-        <input type="number" name="cpf" placeholder="digite seu CPF">
-        <input type="number" name="senha" placeholder="digite uma senha">
+    <header>
+        <h1 class="header__titulo">Bytebank</h1>
 
-        <button>Cadastrar novo cliente</button>
-    </form>
-    <br>
-    <br>
-    <form action="" method="GET" data-form-acessar>
-        <input type="number" name="cpf" placeholder="CPF: ">
-        <input type="number" name="senha" placeholder="senha: ">
+        <span class="header__quantDeClientes">Número de clientes: </span>
+    </header>
 
-        <button>Acessar conta cliente</button>
-    </form>
-    <br>
-    <br>
-    <span>Número de clientes: </span>
+    <main>
 
-    <ul data-lista-clientes>
+        <nav class="main__nav">
+            <li class="main__nav__lista ativo">
+                <a href="#" class="main__nav__lista__link ativo">
+                    Cadastrar Usuário
+                </a>
+            </li>
+            <li class="main__nav__lista">
+                <a href="#" class="main__nav__lista__link">
+                    Entrar na conta
+                </a>
+            </li>
+        </nav>
 
-    </ul>
+        <section class="main__cadastro">
+            <form action="" method="GET" data-form-cadastrar>
+                <input type="text" name="nome" placeholder="Digite seu nome">
+                <input type="number" name="cpf" placeholder="Digite seu CPF">
+                <input type="number" name="senha" placeholder="Digite uma senha">
+
+                <button>Cadastrar novo cliente</button>
+            </form>
+        </section>
+
+        <section class="main__acesso">
+            <form action="" method="GET" data-form-acessar>
+                <input type="number" name="cpf" placeholder="CPF: ">
+                <input type="number" name="senha" placeholder="senha: ">
+
+                <button>Acessar conta cliente</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; - Criado por Bernardo-Dev</p>
+    </footer>
+    <!-- <ul data-lista-clientes>
+
+    </ul> -->
 
     <script type="module" src="./index.js"></script>
 </body>
