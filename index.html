@@ -16,7 +16,7 @@
     <header>
         <h1 class="header__titulo">Bytebank</h1>
 
-        <span class="header__quantDeClientes">Número de clientes: </span>
+        <span class="header__quantDeClientes">Número de clientes: 1.000</span>
     </header>
 
     <main>
@@ -39,17 +39,18 @@
                 <input type="text" name="nome" placeholder="Digite seu nome">
                 <input type="email" name="email" placeholder="Digite seu e-mail">
                 <input type="number" name="cpf" placeholder="Digite seu CPF">
-                <input type="number" name="senha" placeholder="Digite uma senha">
+                <input type="text" name="senha" placeholder="Digite uma senha">
+                <input type="date" name="data" placeholder="Data de nascimento">
 
-                <select>
+                <select name="estado">
                     <option disabled selected>Selecione um estado</option>
-                    <option>SP</option>
-                    <option>RJ</option>
-                    <option>MG</option>
-                    <option>SC</option>
-                    <option>ES</option>
-                    <option>RS</option>
-                    <option>PR</option>
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="MG">MG</option>
+                    <option value="SC">SC</option>
+                    <option value="ES">ES</option>
+                    <option value="RS">RS</option>
+                    <option value="PR">PR</option>
                 </select>
 
                 <button>Cadastrar novo cliente</button>

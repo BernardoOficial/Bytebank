@@ -18,55 +18,38 @@ let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 formCadastro.addEventListener('submit', cadastrarCliente);
 // formAcessar.addEventListener('submit', validarAcesso);
 
-function atualizarClientes() {
-
-    clientes = JSON.parse(localStorage.getItem('clientes')) || [];
-}
-
-function listarClientes() {
-
-    atualizarClientes();
-
-    // Verificar se foi cadastrado o cliente e a conta corrente.
-
-    const listaDeClientes = document.querySelector('[data-lista-clientes]');
-    let novoCliente;
-
-    listaDeClientes.innerHTML = '';
-
-    for (let i = 0; i < clientes.length; i++) {
-
-        novoCliente = document.createElement('li');
-        novoCliente.innerHTML = `
-            <p>${clientes[i]._cliente.nome} | ${clientes[i]._agencia} | ${clientes[i]._saldo} </p>
-        `
-        listaDeClientes.appendChild(novoCliente);
-    }
-
-}
-
-listarClientes();
-
 function cadastrarCliente(evento) {
 
     evento.preventDefault();
 
     let nome = evento.target.nome.value;
+    let email = evento.target.email.value;
     let cpf = evento.target.cpf.value;
     let senha = evento.target.senha.value;
+    let estado = evento.target.estado.value;
+    let data = evento.target.data.value;
 
-    let cliente = new Cliente(nome, cpf, senha);
+    let cliente = new Cliente(nome, cpf, senha, estado, email, data);
 
     let agencia = Math.round(Math.random() * 1000);
     let contaBancaria = new ContaCorrente(cliente, agencia);
 
     clientes.push(contaBancaria);
 
-    localStorage.setItem('clientes', JSON.stringify(clientes));
+    limparCampos(evento);
+    evento.target.nome.focus();
 
-    listarClientes();
+    localStorage.setItem('clientes', JSON.stringify(clientes));
 }
 
+function limparCampos(evento) {
+    evento.target.nome.value = "";
+    evento.target.email.value = "";
+    evento.target.cpf.value = "";
+    evento.target.senha.value = "";
+    evento.target.estado.value = "";
+    evento.target.data.value = "";
+}
 
 
 
