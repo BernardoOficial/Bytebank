@@ -21,29 +21,41 @@
     <main>
 
         <nav class="main__nav">
-            <li class="main__nav__lista ativo">
-                <a href="#" class="main__nav__lista__link ativo">
+            <li class="main__nav__lista">
+                <a href="#" class="main__nav__lista__link ativo" data-aba="cadastrar">
                     Cadastrar Usuário
                 </a>
             </li>
             <li class="main__nav__lista">
-                <a href="#" class="main__nav__lista__link">
+                <a href="#" class="main__nav__lista__link" data-aba="login">
                     Entrar na conta
                 </a>
             </li>
         </nav>
 
-        <section class="main__cadastro">
+        <section class="main__cadastro" data-conteudo="cadastrar">
             <form action="" method="GET" data-form-cadastrar>
                 <input type="text" name="nome" placeholder="Digite seu nome">
+                <input type="email" name="email" placeholder="Digite seu e-mail">
                 <input type="number" name="cpf" placeholder="Digite seu CPF">
                 <input type="number" name="senha" placeholder="Digite uma senha">
+
+                <select>
+                    <option disabled selected>Selecione um estado</option>
+                    <option>SP</option>
+                    <option>RJ</option>
+                    <option>MG</option>
+                    <option>SC</option>
+                    <option>ES</option>
+                    <option>RS</option>
+                    <option>PR</option>
+                </select>
 
                 <button>Cadastrar novo cliente</button>
             </form>
         </section>
 
-        <section class="main__acesso">
+        <section class="main__acesso esconder" data-conteudo="login">
             <form action="" method="GET" data-form-acessar>
                 <input type="number" name="cpf" placeholder="CPF: ">
                 <input type="number" name="senha" placeholder="senha: ">
@@ -55,12 +67,13 @@
     </main>
 
     <footer>
-        <p>Copyright &copy; - Criado por Bernardo-Dev</p>
+        <p class="footer__copyright">Copyright &copy; - Criado por Bernardo-Dev</p>
     </footer>
     <!-- <ul data-lista-clientes>
 
     </ul> -->
 
+    <script src="./script.js"></script>
     <script type="module" src="./index.js"></script>
 </body>
 
