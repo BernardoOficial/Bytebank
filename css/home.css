@@ -1,0 +1,105 @@
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+        "menu"
+        "formulario";
+    width: 80%;
+}
+
+.main__nav {
+    grid-area: menu;
+    justify-self: center;
+    align-self: center;
+    
+    width: 50%;
+    height: 50px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__nav__lista {
+    width: 50%;
+    height: 100%;
+    list-style: none;
+}
+
+.main__nav__lista__link {
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.6rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .3s;
+}
+
+.ativo {
+    background-color: #fff;
+    color: #000;
+}
+
+form input, form button, form select{
+    width: 350px;
+    height: 45px;
+    padding: 0 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: 333;
+
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+form button {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+form button:hover {
+    transform: scale(0.98);
+}
+
+.esconder {
+    display: none;
+}
+
+.main__cadastro {
+    grid-area: formulario;
+    justify-self: center;
+}
+
+.main__cadastro form{
+    display: flex;
+    flex-direction: column;
+}
+
+.main__acesso {
+    grid-area: formulario;
+    justify-self: center;
+}
+
+.main__acesso form {
+    display: flex;
+    flex-direction: column;
+}
