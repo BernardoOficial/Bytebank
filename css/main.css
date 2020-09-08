@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Coolvetica';
-    src: url('../fonte/coolvetica/coolvetica rg.ttf') /*Para os demais navegadores*/;
+    src: url('../fonte/coolvetica/coolvetica rg.ttf');
     font-weight: normal;
     font-style: normal;
 }

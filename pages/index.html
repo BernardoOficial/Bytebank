@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/home.css">
 
     <title>Bytebank</title>
 </head>
@@ -36,13 +36,13 @@
 
         <section class="main__cadastro" data-conteudo="cadastrar">
             <form action="" method="GET" data-form-cadastrar>
-                <input type="text" name="nome" placeholder="Digite seu nome">
-                <input type="email" name="email" placeholder="Digite seu e-mail">
-                <input type="number" name="cpf" placeholder="Digite seu CPF">
-                <input type="text" name="senha" placeholder="Digite uma senha">
-                <input type="date" name="data" placeholder="Data de nascimento">
+                <input type="text" name="nome" placeholder="Digite seu nome" required data-tipo="nome">
+                <input type="email" name="email" placeholder="Digite seu e-mail" required data-tipo="email">
+                <input type="number" name="cpf" placeholder="Digite seu CPF" required data-tipo="cpf">
+                <input type="text" name="senha" placeholder="Digite uma senha" required data-tipo="senha" minlength="6">
+                <input type="date" name="data" placeholder="Data de nascimento" required data-tipo="dataNascimento">
 
-                <select name="estado">
+                <select name="estado" required data-tipo="estado">
                     <option disabled selected>Selecione um estado</option>
                     <option value="SP">SP</option>
                     <option value="RJ">RJ</option>
@@ -53,16 +53,16 @@
                     <option value="PR">PR</option>
                 </select>
 
-                <button>Cadastrar novo cliente</button>
+                <button type="submit">Cadastrar novo cliente</button>
             </form>
         </section>
 
         <section class="main__acesso esconder" data-conteudo="login">
             <form action="" method="GET" data-form-acessar>
-                <input type="number" name="cpf" placeholder="CPF: ">
-                <input type="number" name="senha" placeholder="senha: ">
+                <input type="number" name="cpf" placeholder="CPF: " required data-tipo="cpf">
+                <input type="number" name="senha" placeholder="senha: " required data-tipo="senha" minlength="6">
 
-                <button>Acessar conta cliente</button>
+                <button type="submit">Acessar conta cliente</button>
             </form>
         </section>
 
@@ -75,7 +75,7 @@
 
     </ul> -->
 
-    <script src="./script.js"></script>
+    <script src="./alternarAbas.js"></script>
     <script type="module" src="./index.js"></script>
 </body>
 
