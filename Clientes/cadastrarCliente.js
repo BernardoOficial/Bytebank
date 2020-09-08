@@ -43,3 +43,5 @@ function limparCampos(evento) {
     evento.target.estado.value = "";
     evento.target.data.value = "";
 }
+
+export default cadastrarCliente;

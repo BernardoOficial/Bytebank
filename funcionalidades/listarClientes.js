@@ -1,8 +1,3 @@
-function atualizarClientes() {
-
-    clientes = JSON.parse(localStorage.getItem('clientes')) || [];
-}
-
 function listarClientes() {
 
     atualizarClientes();
@@ -31,6 +26,13 @@ function listarClientes() {
 
 }
 
+let clientes;
+
+function atualizarClientes() {
+
+    clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+}
+
 function criarElementos() {
     let div = document.createElement('div');
     div.classList.add('boxes');
@@ -51,3 +53,5 @@ function criarElementos() {
 }
 
 listarClientes();
+
+export default listarClientes;

@@ -1,9 +1,10 @@
 // Alternar cadastro e login
-
 const conteudos = document.querySelectorAll('[data-conteudo]');
 const abas = document.querySelectorAll('[data-aba]');
 
-abas.forEach(aba => aba.addEventListener('click', (evento) => {
+abas.forEach(aba => aba.addEventListener('click', alternarAbas));
+
+function alternarAbas(evento) {
 
     let dataAtributo = evento.target.dataset.aba;
 
@@ -11,8 +12,7 @@ abas.forEach(aba => aba.addEventListener('click', (evento) => {
     limparAba();
     selecionarConteudo(dataAtributo);
     selecionarAba(aba)
-
-}));
+}
 
 function limparAba() {
     abas.forEach(aba => aba.classList.remove('ativo'));
@@ -31,3 +31,5 @@ function selecionarConteudo(atributo) {
 function selecionarAba(aba) {
     aba.classList.add('ativo');
 }
+
+export default alternarAbas;
