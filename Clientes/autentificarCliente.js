@@ -8,7 +8,7 @@ function atualizarClientes() {
     clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 }
 
-formLogin.addEventListener('submit', autentificarCliente)
+formLogin.addEventListener('submit', autentificarCliente);
 
 function autentificarCliente(evento) {
 
@@ -17,15 +17,15 @@ function autentificarCliente(evento) {
 
     atualizarClientes();
 
-    clientes.forEach(cliente => {
-        if (!cliente._cpf === cpf && cliente._senha === senha) {
-            evento.preventDefault();
-        }
-        else {
-            return;
+    let loginEhValido = clientes.filter(cliente => {
+
+        if (cliente._cpf === cpf && cliente._senha === senha) {
+
+            return cliente;
         }
     });
 
+    localStorage.setItem('login', JSON.stringify(loginEhValido));
 }
 
 export default autentificarCliente;

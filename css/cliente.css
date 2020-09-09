@@ -1,0 +1,19 @@
+
+.main__boasVindas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 10px;
+    height: 100px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+}
+
+.main__boasVindas__titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}

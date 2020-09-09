@@ -6,5 +6,6 @@ import ContaSalario from './Conta/ContaSalario.js';
 import validarCampos from './validacoes/validarCampos.js';
 import cadastrarCliente from './Clientes/cadastrarCliente.js';
 import autentificarCliente from './Clientes/autentificarCliente.js';
+// import carregarInformacoesCliente from './funcionalidades/carregarInformacoesCliente.js';
 import alternarAbas from './funcionalidades/alternarAbas.js';
 import listarClientes from './funcionalidades/listarClientes.js';
