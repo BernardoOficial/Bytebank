@@ -11,7 +11,6 @@ function validarDataNascimento(input) {
 
     if (dataDe18Anos > dataAtual) {
 
-        console.log('entrei')
         input.setCustomValidity("A idade mínima é de 18 anos");
         return;
     }

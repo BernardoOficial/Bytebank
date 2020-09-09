@@ -61,10 +61,6 @@ const validarCPF = (input) => {
         return
     }
 
-    console.log(primeiroDigitoCalculado);
-    console.log(segundoDigitoCalculado);
-
-
     input.setCustomValidity("");
     return;
 }
