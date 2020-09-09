@@ -7,8 +7,15 @@ const inputs = document.querySelectorAll('[data-tipo]');
 
 inputs.forEach(input => {
 
-    input.addEventListener('input', validarCampos)
-    input.addEventListener('blur', validarCampos)
+    input.addEventListener('input', () => {
+
+        validarCampos(input, false);
+    });
+
+    input.addEventListener('blur', () => {
+
+        validarCampos(input);
+    })
 });
 
 function retornarMensagemDeErro(tipo, validity) {
@@ -73,10 +80,9 @@ function retornarMensagemDeErro(tipo, validity) {
     return mensagemDeErro;
 }
 
-function validarCampos(evento) {
+function validarCampos(input) {
 
-    let input = evento.target;
-    let tipo = evento.target.dataset.tipo;
+    let tipo = input.dataset.tipo;
     let campoEhValido = input.validity.valid;
 
     // Situação de validar dados
@@ -107,12 +113,6 @@ function validarCampos(evento) {
         input.classList.remove('form__input__mensagemErro');
         div.remove();
     }
-
-    // form__input__mensagemErro
-    // form__mensagemErro
-
 }
-
-
 
 export default validarCampos;

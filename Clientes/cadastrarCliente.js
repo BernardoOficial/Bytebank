@@ -17,10 +17,14 @@ function cadastrarCliente(evento) {
     let email = evento.target.email.value;
     let cpf = evento.target.cpf.value;
     let senha = evento.target.senha.value;
-    let dataNascimento = evento.target.data.value;
+    let dataNascimento = evento.target.dataNascimento.value;
+    let cep = evento.target.cep.value;
+    let logradouro = evento.target.logradouro.value;
     let estado = evento.target.estado.value;
+    let cidade = evento.target.cidade.value;
+    let bairro = evento.target.bairro.value;
 
-    let cliente = new Cliente(nome, cpf, senha, estado, email, dataNascimento);
+    let cliente = new Cliente(nome, email, cpf, senha, dataNascimento, cep, logradouro, estado, cidade, bairro);
 
     // let agencia = Math.round(Math.random() * 1000);
     // let contaBancaria = new ContaCorrente(cliente, agencia);
@@ -38,8 +42,12 @@ function limparCampos(evento) {
     evento.target.email.value = "";
     evento.target.cpf.value = "";
     evento.target.senha.value = "";
+    evento.target.dataNascimento.value = "";
+    evento.target.cep.value = "";
+    evento.target.logradouro.value = "";
     evento.target.estado.value = "";
-    evento.target.data.value = "";
+    evento.target.cidade.value = "";
+    evento.target.bairro.value = "";
 }
 
 export default cadastrarCliente;
