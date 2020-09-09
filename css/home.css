@@ -52,32 +52,60 @@ main {
     color: #000;
 }
 
+form {
+    background-color: #fff;
+    width: 450px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    
+    border-radius: 10px;
+}
+
+.form__campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+form label {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
 form input, form button, form select{
     width: 350px;
     height: 45px;
     padding: 0 10px;
-    margin: 10px 0;
+    margin: 0;
     box-sizing: border-box;
 
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     color: 333;
 
-    border: none;
+    border: 1px solid #000;
     border-radius: 8px;
     outline: none;
 }
 
 form button {
+    margin: 20px 0;
     font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
     background-color: #fff;
-    transition: transform 0.2s;
+    transition: 0.2s;
 }
 
 form button:hover {
     transform: scale(0.98);
+    border: none;
+    background-color: rgb(109,33,119);
+    color: #fff;
 }
 
 .esconder {
@@ -102,4 +130,15 @@ form button:hover {
 .main__acesso form {
     display: flex;
     flex-direction: column;
+}
+
+.form__input__mensagemErro {
+    border: 1px solid #ff0000cc;
+}
+
+.form__mensagemErro {
+    color: #ff0000cc;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2px;
 }

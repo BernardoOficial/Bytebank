@@ -36,22 +36,47 @@
 
         <section class="main__cadastro" data-conteudo="cadastrar">
             <form action="" method="GET" data-form-cadastrar>
-                <input type="text" name="nome" placeholder="Digite seu nome" required data-tipo="nome">
-                <input type="email" name="email" placeholder="Digite seu e-mail" required data-tipo="email">
-                <input type="number" name="cpf" placeholder="Digite seu CPF" required data-tipo="cpf">
-                <input type="text" name="senha" placeholder="Digite uma senha" required data-tipo="senha" minlength="6">
-                <input type="date" name="data" placeholder="Data de nascimento" required data-tipo="dataNascimento">
-
-                <select name="estado" required data-tipo="estado">
-                    <option disabled selected>Selecione um estado</option>
-                    <option value="SP">SP</option>
-                    <option value="RJ">RJ</option>
-                    <option value="MG">MG</option>
-                    <option value="SC">SC</option>
-                    <option value="ES">ES</option>
-                    <option value="RS">RS</option>
-                    <option value="PR">PR</option>
-                </select>
+                <div class="form__campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required data-tipo="nome">
+                </div>
+                <div class="form__campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required data-tipo="email">
+                </div>
+                <div class="form__campo">
+                    <label for="cpf">CPF:</label>
+                    <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}">
+                </div>
+                <div class="form__campo">
+                    <label for="senha">Senha:</label>
+                    <input type="text" name="senha" id="senha" required data-tipo="senha" minlength="6">
+                </div>
+                <div class="form__campo">
+                    <label for="dataNascimento">Data de nascimento:</label>
+                    <input type="date" name="dataNascimento" id="dataNascimento" required data-tipo="dataNascimento"
+                        min="1900-01-01">
+                </div>
+                <div class="form__campo">
+                    <label for="cep">CEP:</label>
+                    <input type="text" name="cep" id="cep" required data-tipo="cep" pattern="[\d]{5}-?[\d]{3}">
+                </div>
+                <div class="form__campo">
+                    <label for="logradouro">Logradouro:</label>
+                    <input type="text" name="logradouro" id="logradouro" required data-tipo="logradouro">
+                </div>
+                <div class="form__campo">
+                    <label for="estado">Estado:</label>
+                    <input type="text" name="estado" id="estado" required data-tipo="estado">
+                </div>
+                <div class="form__campo">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" id="cidade" required data-tipo="cidade">
+                </div>
+                <div class="form__campo">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" name="bairro" id="bairro" required data-tipo="bairro">
+                </div>
 
                 <button type="submit">Cadastrar novo cliente</button>
             </form>
@@ -59,8 +84,16 @@
 
         <section class="main__acesso esconder" data-conteudo="login">
             <form action="" method="GET" data-form-acessar>
-                <input type="number" name="cpf" placeholder="CPF: " required data-tipo="cpf">
-                <input type="number" name="senha" placeholder="senha: " required data-tipo="senha" minlength="6">
+                <div class="form__campo">
+                    <label for="cpf">CPF:</label>
+                    <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}">
+                </div>
+                <div class="form__campo">
+                    <label for="senha">Senha:</label>
+                    <input type="number" name="senha" id="senha" required data-tipo="senha" minlength="6">
+                </div>
+
+
 
                 <button type="submit">Acessar conta cliente</button>
             </form>
@@ -71,9 +104,6 @@
     <footer>
         <p class="footer__copyright">Copyright &copy; - Criado por Bernardo-Dev</p>
     </footer>
-    <!-- <ul data-lista-clientes>
-
-    </ul> -->
 
     <script type="module" src="../index.js"></script>
 </body>

@@ -7,11 +7,12 @@ abas.forEach(aba => aba.addEventListener('click', alternarAbas));
 function alternarAbas(evento) {
 
     let dataAtributo = evento.target.dataset.aba;
+    let aba = evento.target;
 
     esconderConteudo();
     limparAba();
     selecionarConteudo(dataAtributo);
-    selecionarAba(aba)
+    selecionarAba(aba);
 }
 
 function limparAba() {
