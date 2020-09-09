@@ -142,3 +142,15 @@ form button:hover {
     font-weight: bold;
     margin-top: 2px;
 }
+
+.form__cadastroConcluido {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form__gif {
+    width: 200px;
+}

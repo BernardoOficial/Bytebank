@@ -11,8 +11,6 @@ formCadastro.addEventListener('submit', cadastrarCliente);
 
 function cadastrarCliente(evento) {
 
-    evento.preventDefault();
-
     let nome = evento.target.nome.value;
     let email = evento.target.email.value;
     let cpf = evento.target.cpf.value;
