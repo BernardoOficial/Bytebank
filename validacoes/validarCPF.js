@@ -2,7 +2,7 @@
 const ehUmCpfComNumerosRepetidos = (cpf) => {
 
     const cpfsInvalidos = [
-        "11111111111",
+        // "11111111111",
         "22222222222",
         "33333333333",
         "44444444444",

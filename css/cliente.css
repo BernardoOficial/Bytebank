@@ -61,8 +61,10 @@ main {
 
 .main__contas {
     grid-area: contas;
+    justify-self: flex-end;
 
     height: 150px;
+    width: 250px;
 
     background-color: #fff;
     border-radius: 8px;
