@@ -1,19 +1,112 @@
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 100px 200px 1fr;
+    grid-template-areas: 
+        "boasVindas boasVindas"
+        "infoPessoais contas" 
+        "extrato extrato";
+    width: 80%;
+}
 
 .main__boasVindas {
+    grid-area: boasVindas;
+    justify-self: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    padding: 0px 10px;
-    height: 100px;
+    padding: 0px 20px;
+    width: 60%;
+    height: 50px;
     background-color: #fff;
     color: #333;
     border-radius: 8px;
 }
 
 .main__boasVindas__titulo {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
-    text-align: center;
+}
+
+.main__user {
+    grid-area: infoPessoais;
+    display: flex;
+    align-items: center;
+
+    height: 150px;
+    width: 500px;
+    padding: 10px;
+
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+}
+
+.main__user__img {
+    margin-right: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.main__user__img > img {
+    width: 100px;
+}
+
+.main__user__infoPessoais__texto {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.main__contas {
+    grid-area: contas;
+
+    height: 150px;
+
+    background-color: #fff;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__contas__link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+    margin: 8px;
+
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.main__contas__link:hover {
+    background-color: #000;
+    color: #fff;   
+    border-radius: 4px;
+}
+
+.main__extrato {
+    grid-area: extrato;
+
+    height: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #333;
+    font-size: 1.2rem;
+
 }
