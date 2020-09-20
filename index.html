@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/home.css">
 
     <title>Bytebank</title>
 </head>
@@ -35,7 +35,7 @@
         </nav>
 
         <section class="main__cadastro" data-conteudo="cadastrar">
-            <form action="./pages/cadastroConcluido.html" method="GET" data-form-cadastrar>
+            <form action="./public/pages/cadastroConcluido.html" method="GET" data-form-cadastrar>
                 <div class="form__campo">
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" required data-tipo="nome">
@@ -83,7 +83,8 @@
         </section>
 
         <section class="main__acesso esconder" data-conteudo="login">
-            <form action="./pages/cliente.html" method="GET" data-form-acessar>
+            <form action="./public/pages/cliente.html" method="GET" data-form-acessar>
+
                 <div class="form__campo">
                     <label for="cpf">CPF:</label>
                     <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}">
@@ -92,8 +93,6 @@
                     <label for="senha">Senha:</label>
                     <input type="text" name="senha" id="senha" required data-tipo="senha" minlength="6">
                 </div>
-
-
 
                 <button type="submit">Acessar conta cliente</button>
             </form>
