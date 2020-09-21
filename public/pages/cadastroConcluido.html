@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="../css/format.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/acesso.css">
 
     <title>Bytebank</title>
 </head>
@@ -14,9 +15,11 @@
 <body>
 
     <header>
-        <a href="../../index.html" class="header__titulo">Bytebank</a>
+        <div>
+            <a href="../../index.html" class="header__titulo">Bytebank</a>
 
-        <span class="header__quantDeClientes">Número de clientes: 1.000</span>
+            <span class="header__quantDeClientes">Número de clientes: 1.000</span>
+        </div>
     </header>
 
     <main>
@@ -45,12 +48,13 @@
         <section class="main__acesso esconder" data-conteudo="login">
             <form action="cliente.html" method="GET" data-form-acessar>
                 <div class="form__campo">
+                    <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}"
+                        placeholder=" ">
                     <label for="cpf">CPF:</label>
-                    <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}">
                 </div>
                 <div class="form__campo">
+                    <input type="text" name="senha" id="senha" required data-tipo="senha" minlength="6" placeholder=" ">
                     <label for="senha">Senha:</label>
-                    <input type="text" name="senha" id="senha" required data-tipo="senha" minlength="6">
                 </div>
 
                 <button type="submit">Acessar conta cliente</button>

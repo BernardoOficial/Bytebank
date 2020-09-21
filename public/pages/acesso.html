@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/format.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/acesso.css">
+
+    <title>Bytebank</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="../../index.html" class="header__titulo">Bytebank</a>
+
+            <span class="header__quantDeClientes">Número de clientes: 1.000</span>
+        </div>
+    </header>
+
+    <main>
+
+        <nav class="main__nav">
+            <li class="main__nav__lista">
+                <a href="#" class="main__nav__lista__link ativo" data-aba="cadastrar">
+                    Cadastrar Usuário
+                </a>
+            </li>
+            <li class="main__nav__lista">
+                <a href="#" class="main__nav__lista__link" data-aba="login">
+                    Entrar na conta
+                </a>
+            </li>
+        </nav>
+
+        <section class="main__cadastro" data-conteudo="cadastrar">
+            <form action="./cadastroConcluido.html" method="GET" data-form-cadastrar>
+                <div class="form__campo">
+                    <input type="text" name="nome" id="nome" required data-tipo="nome" placeholder=" ">
+                    <label for="nome">Nome:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="email" name="email" id="email" required data-tipo="email" placeholder=" ">
+                    <label for="email">E-mail:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}"
+                        placeholder=" ">
+                    <label for="cpf">CPF:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="text" name="senha" id="senha" required data-tipo="senha" minlength="6" placeholder=" ">
+                    <label for="senha">Senha:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="date" name="dataNascimento" id="dataNascimento" required data-tipo="dataNascimento"
+                        min="1900-01-01">
+                </div>
+                <div class="form__campo">
+                    <input type="text" name="cep" id="cep" required data-tipo="cep" pattern="[\d]{5}-?[\d]{3}"
+                        placeholder=" ">
+                    <label for="cep">CEP:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="text" name="logradouro" id="logradouro" required data-tipo="logradouro"
+                        placeholder=" ">
+                    <label for="logradouro">Logradouro:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="text" name="estado" id="estado" required data-tipo="estado" placeholder=" ">
+                    <label for="estado">Estado:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="text" name="cidade" id="cidade" required data-tipo="cidade" placeholder=" ">
+                    <label for="cidade">Cidade:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="text" name="bairro" id="bairro" required data-tipo="bairro" placeholder=" ">
+                    <label for="bairro">Bairro:</label>
+                </div>
+
+                <button type="submit">Cadastrar novo cliente</button>
+            </form>
+        </section>
+
+        <section class="main__acesso esconder" data-conteudo="login">
+            <form action="./cliente.html" method="GET" data-form-acessar>
+
+                <div class="form__campo">
+                    <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}"
+                        placeholder=" ">
+                    <label for="cpf">CPF:</label>
+                </div>
+                <div class="form__campo">
+                    <input type="text" name="senha" id="senha" required data-tipo="senha" minlength="6" placeholder=" ">
+                    <label for="senha">Senha:</label>
+                </div>
+
+                <button type="submit">Acessar conta cliente</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer__copyright">Copyright &copy; - Criado por Bernardo-Dev</p>
+    </footer>
+
+    <script type="module" src="../../index.js"></script>
+</body>
+
+</html>

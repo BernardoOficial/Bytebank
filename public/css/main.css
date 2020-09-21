@@ -1,55 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-@font-face {
-    font-family: 'Coolvetica';
-    src: url('../fonte/coolvetica/coolvetica rg.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: 'Open Sans', sans-serif;
-}
-
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px auto 20%;
+    grid-template-rows: 100px auto 10%;
     grid-template-areas: "header"
                          "main"
                          "footer";
     justify-items: center;
-    background-color: rgb(109,33,119);
-    color: #fff;
 }
 
 header {
     grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
+    box-shadow: 0 3px 5px #33333333;
+}
+
+header > div {
     width: 80%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}   
 
 .header__titulo {
     font-family: 'Coolvetica', sans-serif;
     font-size: 5.5rem;
-    color: #fff;
+    color: #6D2177;
     text-decoration: none;
     font-weight: bold;
 }
 
 .header__quantDeClientes {
     font-size: 1.2rem;
+    color: #333;
 }
 
 footer {
