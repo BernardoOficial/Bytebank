@@ -25,7 +25,7 @@ aside {
 }
 
 .aside__usuario__img {
-    width: 70px;
+    width: 90px;
     padding: 10px;
     background-color: #fff;
     border-radius: 50%;
@@ -35,6 +35,8 @@ aside {
     margin-top: 10px;
     color: #fff;
     font-weight: normal;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
 }
 
 .aside__contas__link,
@@ -44,18 +46,88 @@ aside {
     color: #fff;
     margin: 10px 0;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
 }
 
 .ativo {
     background-color: #fff;
-    color: #333;
+    color: #6D2177;
 
-    padding: 8px;
+    padding: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
+.main__conta__sessao {
+    font-size: 4rem;
+}
+
+.main__informacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__informacao__dados {
+    border-radius: 4px;
+    background-color: #333;
+    height: 120px;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__informacao__dados__info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+    box-sizing: content-box;
+}
+
+.main__informacao__menu {
+    height: 120px;
+    width: 50%;
+    background-color: #333;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main__informacao__menu__info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.main__extrato__titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.main__extrato__box {
+    background-color: #6D2177;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .footer__copyright {
     color: #fff;
