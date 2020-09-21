@@ -1,6 +1,6 @@
 body {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 220px 1fr;
     grid-template-areas: "aside main";
 }
 
@@ -9,9 +9,10 @@ aside {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 30px;
 
-
+    position: fixed;
+    width: 220px;
     height: 100vh;
-    background-color: #6D2177;
+    background-color: #333;
 }
 
 .aside__usuario,
@@ -46,8 +47,9 @@ aside {
     color: #fff;
     margin: 10px 0;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0.05rem;
+    text-transform: uppercase;
 }
 
 .ativo {
@@ -60,6 +62,17 @@ aside {
     justify-content: center;
 }
 
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 40% 60%;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
 .main__conta__sessao {
     font-size: 4rem;
 }
@@ -68,6 +81,8 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin: 20px 0;
 }
 
 .main__informacao__dados {
@@ -108,6 +123,10 @@ aside {
     margin: 20px 0;
 }
 
+.main__extrato {
+    margin: 2rem 0;
+}
+
 .main__extrato__titulo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -115,9 +134,98 @@ aside {
 }
 
 .main__extrato__box {
+    background-color: #333;
+    border-radius: 4px;
+
+    display: grid;
+    grid-template-columns: 95%;
+    grid-template-areas: "form"
+                         "table";
+    justify-content: center;
+
+
+}
+
+.main__extrato__box__form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 25% 25% 35%;
+    grid-template-areas: "select1 select2 input";
+
+    margin: 2.5rem 0 1rem 0;
+}
+
+select {
+    width: 180px;
+    height: 35px;
+    padding: 5px 10px;
+    color: #ccc;
+    
+}
+
+select option {
+    color: #333;
+}
+
+input {
+    width: 280px;
+    height: 35px;
+    padding: 5px 10px;
+}
+
+input::placeholder {
+    opacity: 0.8;
+}
+
+.main__extrato__box__table {
+    height: 250px;
+    overflow-y: scroll;
+    margin: 25px 0;
+}
+
+.main__extrato__box__table table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 98%;
+    height: auto;
+
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5),
+                3px 0px 3px rgba(0, 0, 0, 0.5),
+                0px -3px 3px rgba(0, 0, 0, 0.5),
+                -3px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+.main__extrato__box__table thead{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 40px;
+    
+}
+
+.main__extrato__box__table thead td {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
     background-color: #6D2177;
 }
 
+.main__extrato__box__table tbody tr {
+    height: 30px;
+}
+
+.main__extrato__box__table tbody tr:nth-child(1n) {
+    background-color: #ccc;
+}
+.main__extrato__box__table tbody tr:nth-child(2n) {
+    background-color: #fff;
+}
+
+.main__extrato__box__table tbody tr td {
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
 
 
 
