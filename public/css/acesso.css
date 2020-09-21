@@ -1,3 +1,51 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto 10%;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    justify-items: center;
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 0 3px 5px #33333333;
+}
+
+header > div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.header__titulo {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 5.5rem;
+    color: #6D2177;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header__quantDeClientes {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+footer {
+    grid-area: footer;
+    width: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
     grid-area: main;
     display: grid;
