@@ -17,3 +17,16 @@ html {
     font-size: 62.5%;
     font-family: 'Open Sans', sans-serif;
 }
+
+form input, form button, form select{
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: 333;
+
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}

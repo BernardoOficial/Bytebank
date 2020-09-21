@@ -1,114 +1,63 @@
-main {
-    grid-area: main;
+body {
     display: grid;
-    grid-template-rows: 100px 200px 1fr;
-    grid-template-areas: 
-        "boasVindas boasVindas"
-        "infoPessoais contas" 
-        "extrato extrato";
-    width: 80%;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "aside main";
 }
 
-.main__boasVindas {
-    grid-area: boasVindas;
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 30px;
 
-    padding: 0px 20px;
-    width: 60%;
-    height: 50px;
-    background-color: #fff;
-    color: #333;
-    border-radius: 8px;
+
+    height: 100vh;
+    background-color: #6D2177;
 }
 
-.main__boasVindas__titulo {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.main__user {
-    grid-area: infoPessoais;
-    display: flex;
-    align-items: center;
-
-    height: 150px;
-    width: 500px;
-    padding: 10px;
-
-    background-color: #fff;
-    color: #333;
-    border-radius: 8px;
-}
-
-.main__user__img {
-    margin-right: 20px;
-    border: 1px solid #000;
-    border-radius: 4px;
-}
-
-.main__user__img > img {
-    width: 100px;
-}
-
-.main__user__infoPessoais__texto {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.main__contas {
-    grid-area: contas;
-    justify-self: flex-end;
-
-    height: 150px;
-    width: 250px;
-
-    background-color: #fff;
-    border-radius: 8px;
-
+.aside__usuario,
+.aside__contas,
+.aside__metodos,
+.aside__configuracao {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main__contas__link {
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: bold;
-    margin: 8px;
-
-    width: 200px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: 0.2s;
-}
-
-.main__contas__link:hover {
-    background-color: #000;
-    color: #fff;   
-    border-radius: 4px;
-}
-
-.main__extrato {
-    grid-area: extrato;
-
-    height: 100px;
+.aside__usuario__img {
+    width: 70px;
+    padding: 10px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 50%;
+}
 
+.aside__usuario__nome {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.aside__contas__link,
+.aside__metodos__link,
+.aside__configuracao__link {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.ativo {
+    background-color: #fff;
+    color: #333;
+
+    padding: 8px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
 
-    color: #333;
-    font-size: 1.2rem;
-
+.footer__copyright {
+    color: #fff;
+    text-align: center;
 }

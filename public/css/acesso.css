@@ -142,16 +142,6 @@ form input, form button, form select{
     width: 350px;
     height: 50px;
     padding: 0 10px;
-    margin: 0;
-    box-sizing: border-box;
-
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
-    color: 333;
-
-    border: none;
-    border-radius: 8px;
-    outline: none;
 }
 
 form button {

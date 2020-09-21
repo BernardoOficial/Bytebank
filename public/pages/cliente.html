@@ -13,45 +13,36 @@
 
 <body>
 
-    <header>
-        <a href="../../index.html" class="header__titulo">Bytebank</a>
+    <aside>
+        <section class="aside__usuario">
+            <img class="aside__usuario__img" src="../images/User.png" alt="usuario da conta">
+            <h2 class="aside__usuario__nome">Bernardo Pereira</h2>
+        </section>
 
-        <span class="header__quantDeClientes">Número de clientes: 1.000</span>
-    </header>
+        <section class="aside__contas">
+            <a href="" class="aside__contas__link ativo">Conta corrente</a>
+            <a href="" class="aside__contas__link">Conta poupança</a>
+            <a href="" class="aside__contas__link">Conta salário</a>
+        </section>
+
+        <section class="aside__metodos">
+            <a href="" class="aside__metodos__link">Depositar</a>
+            <a href="" class="aside__metodos__link">Transferir</a>
+            <a href="" class="aside__metodos__link">Cobrar</a>
+        </section>
+
+        <section class="aside__configuracao">
+            <a href="" class="aside__configuracao__link">Notificação</a>
+            <a href="" class="aside__configuracao__link">Configurações</a>
+            <a href="" class="aside__configuracao__link">Sair</a>
+        </section>
+
+        <p class="footer__copyright">Copyright &copy; - Criado por Bernardo-Dev</p>
+    </aside>
 
     <main>
 
-
-        <section class="main__boasVindas"></section>
-
-        <section class="main__user">
-            <div class="main__user__img">
-                <img src="../images/User.png" alt="Usuário da conta">
-            </div>
-
-            <div class="main__user__infoPessoais">
-                <p class="main__user__infoPessoais__texto" data-cliente>Cliente: </p>
-                <p class="main__user__infoPessoais__texto" data-agencia>Agência: </p>
-                <p class="main__user__infoPessoais__texto" data-saldo>Saldo: </p>
-            </div>
-        </section>
-
-        <section class="main__contas">
-            <a href="#" class="main__contas__link">Criar conta corrente</a>
-            <a href="#" class="main__contas__link">Criar conta salário</a>
-            <a href="#" class="main__contas__link">Criar conta poupança</a>
-        </section>
-
-        <section class="main__extrato">
-            <p>Nenhuma transação feita durante esse período</p>
-        </section>
-
     </main>
-
-    <footer>
-        <p class="footer__copyright">Copyright &copy; - Criado por Bernardo-Dev</p>
-    </footer>
-
 
     <script type="module" src="../../index.js"></script>
     <script type="module" src="../../funcionalidades/carregarInformacoesCliente.js"></script>
