@@ -1,3 +1,56 @@
+.main__contacorrente.ativo,
+.main__contapoupanca.ativo,
+.main__contasalario.ativo,
+.main__contadepositar.ativo,
+.main__contatransferir.ativo,
+.main__contacobrar.ativo,
+.main__contanotificacao.ativo,
+.main__contaconfiguracao.ativo {
+    animation: sectionAnimation 1s ease;
+    display: grid;
+}
+
+@keyframes sectionAnimation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.main__contacorrente.desativado,
+.main__contapoupanca.desativado,
+.main__contasalario.desativado,
+.main__contadepositar.desativado,
+.main__contatransferir.desativado,
+.main__contacobrar.desativado,
+.main__contanotificacao.desativado,
+.main__contaconfiguracao.desativado {
+    display: none;
+}
+
+.aside__metodos__link.desativado,
+.aside__configuracao__link.desativado,
+.aside__contas__link.desativado {
+    color: #fff;
+    background-color: transparent;
+    display: block;
+    padding: 0;    
+}
+
+.aside__metodos__link.ativo,
+.aside__configuracao__link.ativo,
+.aside__contas__link.ativo {
+    background-color: #fff;
+    color: #6D2177;
+
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 body {
     display: grid;
     grid-template-columns: 220px 1fr;
@@ -50,27 +103,36 @@ aside {
     font-size: 1.1rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-}
-
-.ativo {
-    background-color: #fff;
-    color: #6D2177;
-
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    transition: 0.5s;
 }
 
 main {
     grid-area: main;
-    display: grid;
-    grid-template-columns: 90%;
-    grid-template-rows: 40% 60%;
+}
 
+.main__contacorrente,
+.main__contapoupanca,
+.main__contasalario,
+.main__contadepositar,
+.main__contatransferir,
+.main__contacobrar,
+.main__contanotificacao,
+.main__contaconfiguracao {
+    visibility: visible;
+    grid-template-columns: 90%;
     justify-content: center;
     align-content: center;
     align-items: center;
+
+    padding-top: 40px;
+}
+
+
+.main__contacorrente {
+    grid-template-rows: 40% 60%;
+    /* justify-content: center;
+    align-content: center;
+    align-items: center; */
 }
 
 .main__conta__sessao {
@@ -226,13 +288,6 @@ input::placeholder {
     font-size: 1.1rem;
     padding-left: 10px;
 }
-
-
-
-
-
-
-
 
 
 
