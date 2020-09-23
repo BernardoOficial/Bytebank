@@ -20,14 +20,18 @@ const arraySections = {
 
 function alternarSection(evento) {
 
-    esconderSections();
-    deselecionarLinks();
+    aparecerSection("Conta corrente");
+    selecionarLink(menu[0]);
 
-    const linkAtivado = evento.target;
-    const sectionAtivada = evento.target.textContent;
+    if (evento) {
+        esconderSections();
+        deselecionarLinks();
+        const linkAtivado = evento.target;
+        const sectionAtivada = evento.target.textContent;
 
-    aparecerSection(sectionAtivada);
-    selecionarLink(linkAtivado);
+        aparecerSection(sectionAtivada);
+        selecionarLink(linkAtivado);
+    }
 }
 
 function aparecerSection(sectionAtivada) {
@@ -56,6 +60,6 @@ function selecionarLink(linkAtivado) {
     linkAtivado.classList.add('ativo');
 }
 
-
+alternarSection()
 
 export default alternarSection;
