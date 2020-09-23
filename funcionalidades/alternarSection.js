@@ -1,4 +1,4 @@
-const sections = document.querySelectorAll('main > section');
+const sections = document.querySelectorAll('main#cliente > section');
 const menu = document.querySelectorAll('aside a');
 
 // console.log(menu);
@@ -19,6 +19,9 @@ const arraySections = {
 }
 
 function alternarSection(evento) {
+
+    esconderSections();
+    deselecionarLinks();
 
     aparecerSection("Conta corrente");
     selecionarLink(menu[0]);

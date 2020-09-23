@@ -100,6 +100,10 @@ main {
     color: #fff;
 }
 
+.esconder {
+    display: none;
+}
+
 form {
     background-color: #6D2177;
     width: 450px;
@@ -160,9 +164,7 @@ form button:hover {
     color: #6D2177;
 }
 
-.esconder {
-    display: none;
-}
+
 
 .main__cadastro {
     grid-area: formulario;
