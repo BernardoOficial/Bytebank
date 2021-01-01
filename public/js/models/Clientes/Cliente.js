@@ -20,7 +20,5 @@ class Cliente {
     autenticar(senha) {
         return this._senha == senha;
     }
-
 }
-
 export default Cliente;

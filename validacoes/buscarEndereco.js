@@ -1,4 +1,3 @@
-
 function buscarEndereco(input) {
 
     const cepLimpo = input.value.replace(/\D/g, "");
