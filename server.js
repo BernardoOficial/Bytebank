@@ -2,8 +2,23 @@ const express = require('express');
 
 const server = express();
 
-server.get('/', function (req, res) {
-    return res.send("Servidor funcionou!");
-})
+server
+    .use(express.static('public'))
+    .get('/', index)
+    .get('/acesso', acesso)
+    .get('/cadastro-concluido', cadastro)
+    .get('/cliente', cliente)
+    .listen(3000)
 
-server.listen(3000);
+function index(req, res) {
+    return res.sendFile(__dirname + "/public/pages/index.html");
+}
+function acesso(req, res) {
+    return res.render("acesso.html"); // QUERO SABER A DIFERENÇA ENTRE SENDFILE E RENDER
+}
+function cadastro(req, res) {
+    return res.sendFile(__dirname + "/public/pages/cadastroConcluido.html");
+}
+function cliente(req, res) {
+    return res.sendFile(__dirname + "/public/pages/cliente.html");
+}

@@ -15,7 +15,7 @@
 
     <header>
         <div>
-            <a href="../../index.html" class="header__titulo">Bytebank</a>
+            <a href="/" class="header__titulo">Bytebank</a>
 
             <span class="header__quantDeClientes">Número de clientes: 1.000</span>
         </div>
@@ -37,7 +37,7 @@
         </nav>
 
         <section class="main__cadastro" data-conteudo="cadastrar">
-            <form action="./cadastroConcluido.html" method="GET" data-form-cadastrar>
+            <form action="/cadastro-concluido" method="GET" data-form-cadastrar>
                 <div class="form__campo">
                     <input type="text" name="nome" id="nome" required data-tipo="nome" placeholder=" ">
                     <label for="nome">Nome:</label>
@@ -87,7 +87,7 @@
         </section>
 
         <section class="main__acesso esconder" data-conteudo="login">
-            <form action="./cliente.html" method="GET" data-form-acessar>
+            <form action="/cliente" method="GET" data-form-acessar>
 
                 <div class="form__campo">
                     <input type="number" name="cpf" id="cpf" required data-tipo="cpf" pattern="[0-9]{11}"
@@ -109,7 +109,7 @@
         <p class="footer__copyright">Copyright &copy; - Criado por Bernardo-Dev</p>
     </footer>
 
-    <script type="module" src="../../index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

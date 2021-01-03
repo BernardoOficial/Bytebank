@@ -2,7 +2,7 @@
   "name": "bytebank",
   "version": "1.0.0",
   "description": "Projeto do bytebank para seus clientes",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
