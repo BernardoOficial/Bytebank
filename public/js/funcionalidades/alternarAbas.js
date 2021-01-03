@@ -33,6 +33,4 @@ function selecionarAba(aba) {
     aba.classList.add('ativo');
 }
 
-module.exports = {
-    alternarAbas
-}
+export default alternarAbas;

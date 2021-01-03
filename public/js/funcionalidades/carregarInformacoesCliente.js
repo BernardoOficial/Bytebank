@@ -11,8 +11,6 @@ let infoCliente = document.querySelector('[data-cliente]');
 let infoAgencia = document.querySelector('[data-agencia]');
 let infoSaldo = document.querySelector('[data-saldo]');
 
-console.log(infoAgencia);
-
 function carregaInformacoesCliente() {
 
     atualizarLogin();

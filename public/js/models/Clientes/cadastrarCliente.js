@@ -1,4 +1,4 @@
-import Cliente from '../public/js/models/Cliente.js';
+import Cliente from '../Clientes/Cliente.js';
 
 // variáveis
 const formCadastro = document.querySelector('[data-form-cadastrar]');

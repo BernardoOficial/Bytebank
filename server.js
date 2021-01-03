@@ -1,5 +1,4 @@
 const express = require('express');
-
 const server = express();
 
 server
@@ -14,7 +13,7 @@ function index(req, res) {
     return res.sendFile(__dirname + "/public/pages/index.html");
 }
 function acesso(req, res) {
-    return res.render("acesso.html"); // QUERO SABER A DIFERENÇA ENTRE SENDFILE E RENDER
+    return res.sendFile(__dirname + "/public/pages/acesso.html");
 }
 function cadastro(req, res) {
     return res.sendFile(__dirname + "/public/pages/cadastroConcluido.html");
@@ -22,3 +21,6 @@ function cadastro(req, res) {
 function cliente(req, res) {
     return res.sendFile(__dirname + "/public/pages/cliente.html");
 }
+
+// QUERO SABER A DIFERENÇA ENTRE SENDFILE E RENDER
+// RENDER É UTILIZADO COM O NUNJUNKS

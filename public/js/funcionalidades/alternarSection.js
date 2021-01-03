@@ -1,7 +1,6 @@
 const sections = document.querySelectorAll('main#cliente > section');
 const menu = document.querySelectorAll('aside a');
 
-// console.log(menu);
 menu.forEach(link => {
 
     link.addEventListener('click', alternarSection);
