@@ -1,4 +1,4 @@
-class Cliente {
+export class Cliente {
 
     get cpf() {
         return this._cpf;
@@ -21,4 +21,5 @@ class Cliente {
         return this._senha == senha;
     }
 }
+
 export default Cliente;

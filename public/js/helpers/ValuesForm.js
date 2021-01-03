@@ -15,7 +15,7 @@ class ValuesForm {
             "bairro"
         ]
 
-        return campos.forEach(campo => {
+        return campos.map(function (campo) {
             return evento.target[campo].value;
         });
     }

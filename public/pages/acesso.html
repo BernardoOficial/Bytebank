@@ -109,7 +109,26 @@
         <p class="footer__copyright">Copyright &copy; - Criado por Bernardo-Dev</p>
     </footer>
 
-    <script type="module" src="../js/index.js"></script>
+    <script type="module">
+
+        import { CadastroController } from "../js/index.js"
+
+        CadastroController()
+
+    </script>
+
+    <!-- <script type="module" src="../js/controllers/CadastroController.js"></script> -->
+
+    <!-- <script type="module">
+
+        import CadastroController from '../js/controllers/CadastroController.js'
+
+        let cadastroController = new CadastroController()
+
+        console.log(cadastroController.cadastrarClientes);
+
+    </script> -->
+
 </body>
 
 </html>
