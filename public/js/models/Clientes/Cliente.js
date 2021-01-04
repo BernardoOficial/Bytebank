@@ -1,9 +1,5 @@
 export class Cliente {
 
-    get cpf() {
-        return this._cpf;
-    }
-
     constructor(nome, email, cpf, senha, dataNascimento, cep, logradouro, estado, cidade, bairro) {
         this.nome = nome;
         this._email = email;
@@ -15,6 +11,14 @@ export class Cliente {
         this._estado = estado;
         this._cidade = cidade;
         this._bairro = bairro;
+    }
+
+    get cpf() {
+        return this._cpf;
+    }
+
+    get senha() {
+        return this._senha;
     }
 
     autenticar(senha) {
