@@ -1,4 +1,4 @@
-function validarDataNascimento(input) {
+const validarDataNascimento = (input) => {
 
     const dataNascimento = new Date(input.value);
     const dataAtual = new Date();

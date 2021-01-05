@@ -38,4 +38,4 @@ const atualizarClientes = () => JSON.parse(
     localStorage.getItem('clientes')) ||
     [];
 
-export default LoginController
+export default LoginController;

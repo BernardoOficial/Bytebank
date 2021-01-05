@@ -38,4 +38,4 @@ const cadastrarClientes = evento => {
     localStorage.setItem('clientes', JSON.stringify(clientes));
 }
 
-export default CadastroController
+export default CadastroController;
